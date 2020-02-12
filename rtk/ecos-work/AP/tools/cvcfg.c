@@ -69,6 +69,9 @@ unsigned int mib_tlv_init_from(const mib_table_entry_T *mib_root_tbl, unsigned c
 unsigned int mib_tlv_init(const mib_table_entry_T *mib_tbl, unsigned char *from_data, void *pfile, unsigned int tlv_content_len);
 #endif //  #ifdef MIB_TLV
 #endif
+#if defined(VLAN_CONFIG_SUPPORTED) || defined(RTL_IPFILTER_SUPPORT_IP_RANGE)
+void getVal6(char *value, char **p1, char **p2, char **p3, char **p4, char **p5, char **p6);
+#endif
 
 #ifdef WIN32
 typedef unsigned long in_addr_t;

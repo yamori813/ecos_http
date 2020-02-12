@@ -155,7 +155,7 @@ mkfs.jffs2:
         fi;
 
 cvcfg-gw: cvcfg.c ../apmib/apmib.h
-	gcc $(TOOLS_CFLAGS) -o cvcfg-gw cvcfg.c ../apmib/mibtbl.c	
+	cc $(TOOLS_CFLAGS) -o cvcfg-gw cvcfg.c ../apmib/mibtbl.c	
 ##############################################################################
 
 depend: $(SOURCES)
