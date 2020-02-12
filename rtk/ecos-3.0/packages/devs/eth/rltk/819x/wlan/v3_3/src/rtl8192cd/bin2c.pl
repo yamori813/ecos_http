@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/local/bin/perl
 
 if ($#ARGV != 0) {
 	die "Usage: bin2c <name>";

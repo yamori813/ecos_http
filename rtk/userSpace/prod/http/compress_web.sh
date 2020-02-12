@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 # 压缩页面代码脚本，leon
 # 2016年10月14日14:20:55

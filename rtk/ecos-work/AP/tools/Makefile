@@ -140,10 +140,10 @@ clean:
 #------------------------------------------------------------------------------
 
 compweb: compweb.c ../apmib/apmib.h
-	gcc $(TOOLS_CFLAGS) -o compweb compweb.c
+	cc $(TOOLS_CFLAGS) -o compweb compweb.c
 
 mgbin: mgbin.c ../apmib/apmib.h
-	gcc $(TOOLS_CFLAGS) -o mgbin mgbin.c
+	cc $(TOOLS_CFLAGS) -o mgbin mgbin.c
 
 mgbin-clean:
 	rm -f mgbin.o mgbin

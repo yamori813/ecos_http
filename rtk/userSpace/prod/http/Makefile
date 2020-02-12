@@ -114,6 +114,7 @@ endif
 $(MODULE): $(ALL_OBJS)
 	$(LD) -r $(TDAPP_LDFLAGS) -o $(MODULE) $(ALL_OBJS)
 	rm -f webrom.c webrom.d webrom.o webcomp
+	mkdir -p obj
 	mv *.o *.d obj/
 	mv obj/$(MODULE) ./
 
@@ -149,7 +150,7 @@ webcomp:
 
 webrom.c: webcomp
 
-	rm web/$(CONFIG_WEB_DIR)_src_mini -rf
+	rm -rf web/$(CONFIG_WEB_DIR)_src_mini
 	./compress_web.sh web/$(CONFIG_WEB_DIR)_src ./compress_tools
 	find web/$(CONFIG_WEB_DIR)_src_mini -type f ! -path "*.svn*" ! -path "*goform*" >web_files
 
